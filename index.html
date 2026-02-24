@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandy Travel | Community Questionnaire</title>
-    <script>
+   <script>
   !function(){var i="analytics",analytics=window[i]=window[i]||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","screen","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware","register"];analytics.factory=function(e){return function(){if(window[i].initialized)return window[i][e].apply(window[i],arguments);var n=Array.prototype.slice.call(arguments);if(["track","screen","alias","group","page","identify"].indexOf(e)>-1){var c=document.querySelector("link[rel='canonical']");n.push({__t:"bpc",c:c&&c.getAttribute("href")||void 0,p:location.pathname,u:location.href,s:location.search,t:document.title,r:document.referrer})}n.unshift(e);analytics.push(n);return analytics}};for(var n=0;n<analytics.methods.length;n++){var key=analytics.methods[n];analytics[key]=analytics.factory(key)}analytics.load=function(key,n){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute("data-global-segment-analytics-key",i);t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r);analytics._loadOptions=n};analytics._writeKey="C158qVZEEzhSwFzRgAsTOlgaeQRGatpQ";;analytics.SNIPPET_VERSION="5.2.0";
   analytics.load("C158qVZEEzhSwFzRgAsTOlgaeQRGatpQ");
   analytics.page();
   }}();
-</script>
+</script> 
     <style>
         :root {
             --primary-coral: #FF7F6A;
@@ -40,27 +40,30 @@
             max-width: 600px;
             width: 90%;
             text-align: center;
-            margin: 20px;
+            margin: 40px 20px;
         }
 
         .logo-container img {
-            max-width: 150px;
+            max-width: 180px; /* Tamaño ideal para el logo circular */
             height: auto;
             border-radius: 50%;
-            margin-bottom: 20px;
-            border: 4px solid var(--secondary-teal);
+            margin-bottom: 10px;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: var(--primary-coral);
             margin-bottom: 10px;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            letter-spacing: -1px;
         }
 
-        p {
+        p.subtitle {
             color: var(--dark-blue);
             font-style: italic;
             margin-bottom: 30px;
+            opacity: 0.8;
         }
 
         form {
@@ -72,6 +75,7 @@
             font-weight: bold;
             margin-bottom: 8px;
             color: var(--secondary-teal);
+            font-size: 0.95rem;
         }
 
         input[type="text"],
@@ -80,41 +84,46 @@
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            border: 2px solid #eee;
-            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
             box-sizing: border-box;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
         }
 
         input:focus, textarea:focus {
-            border-color: var(--primary-coral);
+            border-color: var(--secondary-teal);
+            background-color: var(--white);
             outline: none;
+            box-shadow: 0 0 8px rgba(79, 176, 174, 0.2);
         }
 
         input[type="submit"] {
             background-color: var(--primary-coral);
             color: white;
-            padding: 15px 30px;
+            padding: 16px 30px;
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             width: 100%;
-            transition: transform 0.2s, background-color 0.3s;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         input[type="submit"]:hover {
             background-color: #e66a56;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 127, 106, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 127, 106, 0.4);
         }
 
         .footer-note {
-            font-size: 0.8rem;
-            margin-top: 20px;
-            color: #888;
+            font-size: 0.85rem;
+            margin-top: 25px;
+            color: #aaa;
         }
     </style>
 </head>
@@ -122,25 +131,25 @@
 
 <div class="container">
     <div class="logo-container">
-        <img src="https://path-to-your-sandy-travel-logo.png" alt="Sandy Travel Logo">
+        <img src="https://image2url.com/r2/default/images/1771976272550-3cde9294-4e02-4694-aaef-3b6a2e39baa2.png" alt="Sandy Travel Logo">
     </div>
 
     <h1>Where to next? ✈️</h1>
-    <p>Help us build the most amazing directory of travel destinations in the world.</p>
+    <p class="subtitle">Join our community and share the sweetest travel spots you've found.</p>
 
     <form name="travel" onsubmit="identify(event)">
         
         <label for="destination">What is your favorite travel destination?</label>
-        <input name="destination" id="destination" placeholder="e.g. Kyoto, Japan or Tulum, Mexico" required type="text"/>
+        <input name="destination" id="destination" placeholder="e.g. Kyoto, Japan or Amalfi Coast, Italy" required type="text"/>
 
         <label for="details">Your recommendations:</label>
-        <textarea id="details" name="details" placeholder="Cool things to do, hidden gems, or restaurants you loved..." required rows="5"></textarea>
+        <textarea id="details" name="details" placeholder="Tell us about the best things to do, hidden gems, or top-tier restaurants..." required rows="5"></textarea>
 
-        <label for="fullname">Name:</label>
-        <input name="fullname" id="fullname" placeholder="Your full name" required type="text"/>
+        <label for="fullname">Full Name:</label>
+        <input name="fullname" id="fullname" placeholder="John Doe" required type="text"/>
 
-        <label for="email">Email:</label>
-        <input name="email" id="email" placeholder="your@email.com" required type="email"/>
+        <label for="email">Email Address:</label>
+        <input name="email" id="email" placeholder="hello@example.com" required type="email"/>
 
         <input name="submit" type="submit" value="Share My Adventure! 🌍"/>
     </form>
@@ -167,7 +176,7 @@
         });
       }
 </script>
-    <p class="footer-note">Join the Sandy Travel community and explore more. 🏝️</p>
+    <p class="footer-note">© 2026 Sandy Travel Community. Wander often, wonder always. 🏝️</p>
 </div>
 
     </body>
