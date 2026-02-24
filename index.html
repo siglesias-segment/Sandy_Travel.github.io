@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy Travel | Community Questionnaire</title>
+    <script>
+  !function(){var i="analytics",analytics=window[i]=window[i]||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","screen","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware","register"];analytics.factory=function(e){return function(){if(window[i].initialized)return window[i][e].apply(window[i],arguments);var n=Array.prototype.slice.call(arguments);if(["track","screen","alias","group","page","identify"].indexOf(e)>-1){var c=document.querySelector("link[rel='canonical']");n.push({__t:"bpc",c:c&&c.getAttribute("href")||void 0,p:location.pathname,u:location.href,s:location.search,t:document.title,r:document.referrer})}n.unshift(e);analytics.push(n);return analytics}};for(var n=0;n<analytics.methods.length;n++){var key=analytics.methods[n];analytics[key]=analytics.factory(key)}analytics.load=function(key,n){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute("data-global-segment-analytics-key",i);t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r);analytics._loadOptions=n};analytics._writeKey="C158qVZEEzhSwFzRgAsTOlgaeQRGatpQ";;analytics.SNIPPET_VERSION="5.2.0";
+  analytics.load("C158qVZEEzhSwFzRgAsTOlgaeQRGatpQ");
+  analytics.page();
+  }}();
+</script>
+    <style>
+        :root {
+            --primary-coral: #FF7F6A;
+            --secondary-teal: #4FB0AE;
+            --sand-beige: #F4E4C1;
+            --dark-blue: #2C3E50;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--sand-beige);
+            background-image: linear-gradient(180deg, var(--secondary-teal) 0%, var(--sand-beige) 100%);
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--dark-blue);
+        }
+
+        .container {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid var(--secondary-teal);
+        }
+
+        h1 {
+            color: var(--primary-coral);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: var(--dark-blue);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--secondary-teal);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--primary-coral);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: var(--primary-coral);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e66a56;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 127, 106, 0.4);
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="https://path-to-your-sandy-travel-logo.png" alt="Sandy Travel Logo">
+    </div>
+
+    <h1>Where to next? ✈️</h1>
+    <p>Help us build the most amazing directory of travel destinations in the world.</p>
+
+    <form name="travel" onsubmit="identify(event)">
+        
+        <label for="destination">What is your favorite travel destination?</label>
+        <input name="destination" id="destination" placeholder="e.g. Kyoto, Japan or Tulum, Mexico" required type="text"/>
+
+        <label for="details">Your recommendations:</label>
+        <textarea id="details" name="details" placeholder="Cool things to do, hidden gems, or restaurants you loved..." required rows="5"></textarea>
+
+        <label for="fullname">Name:</label>
+        <input name="fullname" id="fullname" placeholder="Your full name" required type="text"/>
+
+        <label for="email">Email:</label>
+        <input name="email" id="email" placeholder="your@email.com" required type="email"/>
+
+        <input name="submit" type="submit" value="Share My Adventure! 🌍"/>
+    </form>
+<script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var fullname = form["fullname"].value;
+        var destination = form["destination"].value;
+        var details = form["details"].value;
+        var user = {
+            email: email, 
+            name: fullname, 
+            destination: destination, 
+            details: details
+        };
+        analytics.identify('1234', {
+            email: email, 
+            name: fullname
+        });
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
+        });
+      }
+</script>
+    <p class="footer-note">Join the Sandy Travel community and explore more. 🏝️</p>
+</div>
+
+    </body>
+</html>
